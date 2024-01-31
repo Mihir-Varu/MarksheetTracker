@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bac"
+    tools:context=".MainActivity">
+
+    <!-- Container for logo and text -->
+    <RelativeLayout
+        android:id="@+id/logo_text_container"
+        android:layout_width="406dp"
+        android:layout_height="350dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp">
+
+        <!-- ImageView for your app logo -->
+
+        <ImageView
+            android:id="@+id/app_logo"
+            android:layout_width="125dp"
+            android:layout_height="270dp"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="0dp"
+            android:src="@drawable/logo_bg" />
+
+        <TextView
+            android:id="@+id/Welcome"
+            android:layout_width="354dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="-80dp"
+            android:layout_toEndOf="@id/app_logo"
+            android:gravity="center"
+            android:text="Welcome\nMarksheet Tracker"
+            android:textColor="@color/black"
+            android:textSize="35sp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+    <!-- LinearLayout to contain the buttons -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/logo_text_container"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/loginbtn1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/design_default_color_secondary"
+            android:text="LOGIN"
+            android:textColor="@android:color/black" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/singup1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:backgroundTint="@color/design_default_color_secondary"
+            android:text="SIGNUP"
+            android:textColor="@android:color/black" />
+    </LinearLayout>
+
+</RelativeLayout>
